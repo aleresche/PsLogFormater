@@ -30,7 +30,7 @@ CompanyName = 'Philip Morris International'
 Copyright = '(c) 2019 Philip Morris International. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'Module to Customize output logging following DW Naming convention'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''
