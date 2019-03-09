@@ -19,16 +19,16 @@ function write-Log() {
     .EXAMPLE
     write-log -level ERRO -Message "unable to resolve www.example.com"
     .EXAMPLE
-    write-log -taskname "MailboxMigration"  -level WARN -Message "Unable to verify SSL certificate validity"
+    write-log -activity "MailboxMigration"  -level WARN -Message "Unable to verify SSL certificate validity"
     #>
         Param (
-            [Parameter(Mandatory = $false)]  [string]$taskname,
+            [Parameter(Mandatory = $false)]  [string]$activity,
             [Parameter(Mandatory = $false)]  [string]$level = "INFO",
             [Parameter(Mandatory = $true)]   [string]$Message
         )            
-        if (!($taskname)) {
-            $taskname = "pslogger"
+        if (!($activity)) {
+            $activity = "task"
         }
-        $Line = "$Level - $Message"
+        $Line = "$activity : $Level - $Message"
         write-output $Line 
     }
